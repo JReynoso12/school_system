@@ -26,7 +26,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  let payload: { role?: string } | null = null;
+  let payload: { role: string } | null = null;
   try {
     const result = await jwtVerify(token, JWT_SECRET);
     payload = result.payload as { role: string };
