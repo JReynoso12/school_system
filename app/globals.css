@@ -1,0 +1,58 @@
+/* Poppins loaded via CSS so the build does not need to reach Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-poppins: "Poppins", system-ui, sans-serif;
+    --background: 240 5% 97%;
+    --foreground: 260 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 260 30% 15%;
+    --primary: 271 76% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 47% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 260 10% 45%;
+    --accent: 270 30% 95%;
+    --accent-foreground: 260 30% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 271 76% 53%;
+  }
+
+  .dark {
+    --background: 260 30% 8%;
+    --foreground: 0 0% 98%;
+    --card: 260 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --primary: 271 76% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 47% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 260 20% 18%;
+    --muted-foreground: 260 10% 65%;
+    --accent: 260 20% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 260 20% 22%;
+    --input: 260 20% 22%;
+    --ring: 271 76% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
